@@ -1,0 +1,1 @@
+db.organizations.createIndex( { "code": 1 }, { unique: true } )

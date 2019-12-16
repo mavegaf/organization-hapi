@@ -1,0 +1,34 @@
+{
+  "name": "organization-hapi",
+  "version": "1.0.0",
+  "description": "RESTful JSON for Organization",
+  "main": "./src/server.js",
+  "scripts": {
+    "start": "node ./src/server",
+    "test": "lab -v test -I 'core,__core-js_shared__'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mavegaf/organization-hapi.git"
+  },
+  "keywords": [
+    "hapi"
+  ],
+  "author": "Marcelo Vega",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mavegaf/organization-hapi/issues"
+  },
+  "homepage": "https://github.com/mavegaf/organization-hapi#readme",
+  "dependencies": {
+    "@hapi/boom": "^8.0.1",
+    "@hapi/code": "^7.0.0",
+    "@hapi/hapi": "^18.4.0",
+    "@hapi/inert": "^5.2.2",
+    "@hapi/joi": "^16.1.8",
+    "@hapi/lab": "^21.0.0",
+    "@hapi/vision": "^5.5.4",
+    "hapi-swagger": "^11.1.0",
+    "mongodb": "^3.4.0"
+  }
+}
