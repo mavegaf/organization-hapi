@@ -80,7 +80,7 @@ const plugin = {
             query['name'] = name;
           }
 
-          if (code != null) {
+          if (code != null && code != 'all') {
             query['code'] = code;
           }
 
@@ -98,9 +98,9 @@ const plugin = {
           tags: ['api'],
           validate: {
             query: Joi.object({
-              code: Joi.string(),
+              code: Joi.string().description('Use "all" to retrive all with code'),
               name: Joi.string()
-            })
+            }).label('asd')
           }
         }
       },
