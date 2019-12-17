@@ -59,7 +59,12 @@ const plugin = {
           return h.response(createResponse(organization)).type('application/json');
         },
         options: {
-          tags: ['api']
+          tags: ['api'],
+          validate: {
+            params: Joi.object({
+              code: Joi.string()
+            })
+          }
         }
       },
       {
@@ -173,6 +178,9 @@ const plugin = {
               url: Joi.string().uri().required(),
               type: Joi.string().valid('employer', 'insurance', 'health system').required()
             }),
+            params: Joi.object({
+              code: Joi.string()
+            }),
             failAction: handleError
           },
         }
@@ -196,7 +204,12 @@ const plugin = {
           return h.response(createResponse(r.value)).code(200);
         },
         options: {
-          tags: ['api']
+          tags: ['api'],
+          validate: {
+            params: Joi.object({
+              code: Joi.string()
+            })
+          }
         }
       }])
   }
